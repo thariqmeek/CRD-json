@@ -28,7 +28,7 @@ public class App
 	 public  List<Person>  reading() throws Exception {
 		 List<Person> persons;
 			ObjectMapper mapper = new ObjectMapper();
-		 InputStream inputStream = new FileInputStream(new File("d:\\json\\personsOut.json.txt"));
+		 InputStream inputStream = new FileInputStream(new File("d:\\json\\personsOut.json"));
 	    	TypeReference<List<Person>>  typeReference = new TypeReference<List<Person>>() {};
 
 			persons = mapper.readValue(inputStream, typeReference);
@@ -54,13 +54,13 @@ public class App
 		List<Person> persons;
 		ObjectMapper mapper = new ObjectMapper();
 		
-		 File tmpDir = new File("d:\\json\\personsOut.json.txt");
+		 File tmpDir = new File("d:\\json\\personsOut.json");
 		    boolean exists = tmpDir.exists();
 		   // if (exists) System.out.println("/var/tmp exists");
     	
     	if(exists)
     	{	    		 
-	    	InputStream inputStream = new FileInputStream(new File("d:\\json\\personsOut.json.txt"));
+	    	InputStream inputStream = new FileInputStream(new File("d:\\json\\personsOut.json"));
 	    	TypeReference<List<Person>>  typeReference = new TypeReference<List<Person>>() {};
 
     		persons = mapper.readValue(inputStream, typeReference);
@@ -105,7 +105,9 @@ public class App
 	    	{
 	    		person.setId(id);
 	    		person.setfName(fName);
-		    	persons.add(person);
+				persons.add(person);
+				System.out.println("DATA ENTERED SUCCESSFULLY");
+				
 	    	}
 	    	else
 	    	{
@@ -114,7 +116,7 @@ public class App
 	    	}
 
     	}
-    	mapper.writerWithDefaultPrettyPrinter().writeValue(new File("d:\\json\\personsOut.json.txt"), persons);
+    	mapper.writerWithDefaultPrettyPrinter().writeValue(new File("d:\\json\\personsOut.json"), persons);
     	
     	
 	} 
@@ -136,7 +138,7 @@ public class App
 	///
 	}
 	public void read() throws Exception  {
-		File tmpDir = new File("d:\\json\\personsOut.json.txt");
+		File tmpDir = new File("d:\\json\\personsOut.json");
 	    boolean exists = tmpDir.exists();
 		List<Person> persons;
 		//ObjectMapper mapper = new ObjectMapper();
@@ -176,7 +178,7 @@ public class App
 {
 				index=persons.indexOf(p);
 				persons.remove(index);
-				mapper.writerWithDefaultPrettyPrinter().writeValue(new File("d:\\json\\personsOut.json.txt"), persons);
+				mapper.writerWithDefaultPrettyPrinter().writeValue(new File("d:\\json\\personsOut.json"), persons);
 				System.out.println("-------------ID " +id+ "  DELETED-------------" );
 				break;
 }
