@@ -31,15 +31,15 @@ ObjectMapper mapper = new ObjectMapper();
 * it will reliably create itself in a reasonable location on the laptop *d:\\json\\personsOut.json*.  
 
 ### Inserting data and STORING IT IN A LOCAL SYSTEM FILE *personsOut.json*
-![](freshworks/1.jpg)
+![Screenshot](freshworks/1.jpg)
 ## Reading data from local stored JSON file
-![](freshworks/2.jpg)
+![Screenshot](freshworks/2.jpg)
 ## Deleting data from local stored JSON file 
-![](freshworks/3.jpg)
+![Screenshot](freshworks/3.jpg)
 ## Data after deleting ID
-![](freshworks/4.jpg)
+![Screenshot](freshworks/4.jpg)
 ## Data Already Exist
 * Create is invoked for an existing key, an appropriate error is returned.
-![](freshworks/6.jpg)
+![Screenshot](freshworks/6.jpg)
 ## Exit from System..
-![](freshworks/5.jpg)
+![Screenshot](freshworks/5.jpg)
