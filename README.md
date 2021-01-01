@@ -8,7 +8,7 @@ Build a file-based key-value data store that supports the basic CRD (create, rea
 # PROCESS INVOLVED
 ## eclipse IDE is used in creating this project
 
-* Initially maven project is created.
+#### Initially maven project is created.
 ![](freshworks/maven.jpg)
 * Jackson(is a very popular and efficient java based library to serialize or map java objects to JSON and vice versa.)
 JSON data service is used for handling(CREATE,READ,DELETE) data.
